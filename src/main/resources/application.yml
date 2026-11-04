@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/framenote}
+    username: ${DB_USERNAME:framenote}
+    password: ${DB_PASSWORD:framenote_dev}
+  jpa:
+    hibernate:
+      ddl-auto: update # SOLO desarrollo; migraciones Flyway para producción
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 250MB
+      max-request-size: 250MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+framenote:
+  jwt-secret: ${JWT_SECRET:change-this-local-development-secret-must-be-long-enough-123456789}
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html

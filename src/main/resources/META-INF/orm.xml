@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm" version="3.1">
+  <entity class="com.framenote.domain.Account" access="FIELD">
+    <table name="account_records"/>
+    <attributes>
+      <id name="id"/>
+      <basic name="email"><column unique="true"/></basic>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Annotation" access="FIELD">
+    <table name="annotation_records"/>
+    <attributes>
+      <id name="id"/>
+      <basic name="text"><column length="4000"/></basic>
+      <basic name="geometryJson"><column column-definition="text"/></basic>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.AuditLog" access="FIELD">
+    <table name="auditlog_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Comment" access="FIELD">
+    <table name="comment_records"/>
+    <attributes>
+      <id name="id"/>
+      <basic name="text"><column length="4000"/></basic>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Invitation" access="FIELD">
+    <table name="invitation_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Membership" access="FIELD">
+    <table name="membership_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Notification" access="FIELD">
+    <table name="notification_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Project" access="FIELD">
+    <table name="project_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.ProjectMember" access="FIELD">
+    <table name="projectmember_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Video" access="FIELD">
+    <table name="video_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.VideoVersion" access="FIELD">
+    <table name="videoversion_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+  <entity class="com.framenote.domain.Workspace" access="FIELD">
+    <table name="workspace_records"/>
+    <attributes>
+      <id name="id"/>
+    </attributes>
+  </entity>
+</entity-mappings>
